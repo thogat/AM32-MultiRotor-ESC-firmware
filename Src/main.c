@@ -186,7 +186,7 @@
 //=============================  Defaults =============================
 //===========================================================================
 
-uint8_t drive_by_rpm = 0;
+uint8_t drive_by_rpm = 1;
 uint32_t MAXIMUM_RPM_SPEED_CONTROL = 12000;
 uint32_t MINIMUM_RPM_SPEED_CONTROL = 2000;
 
