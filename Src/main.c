@@ -27,7 +27,7 @@
  * 1.57
  * -- remove spurious commutations and rpm data at startup by polling for longer interval on startup
  *
- * 1.58
+ * 1.58 
  * -- move signal timeout to 10khz routine and set armed timeout to one quarter second 2500 / 10000
  * 1.59
  * -- moved comp order definitions to target.h
