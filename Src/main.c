@@ -187,8 +187,8 @@
 //===========================================================================
 
 uint8_t drive_by_rpm = 1;
-uint32_t MAXIMUM_RPM_SPEED_CONTROL = 12000;
-uint32_t MINIMUM_RPM_SPEED_CONTROL = 2000;
+uint32_t MAXIMUM_RPM_SPEED_CONTROL = 4300;
+uint32_t MINIMUM_RPM_SPEED_CONTROL = 300;
 
  //assign speed control PID values values are x10000
  fastPID speedPid = {      //commutation speed loop time
