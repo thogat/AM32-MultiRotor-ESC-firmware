@@ -493,7 +493,7 @@ uint16_t zero_input_count = 0;
 uint16_t input = 0;
 uint16_t newinput =0;
 char inputSet = 0;
-char dshot = 1;
+char dshot = 0;
 char servoPwm = 0;
 uint32_t zero_crosses;
 
@@ -1205,7 +1205,7 @@ void interruptRoutine(){
 						battery_voltage,
 						actual_current,
 						(uint16_t)consumed_current,
-						dataReceived);
+						e_rpm);
 				send_telem_DMA();
 				send_telemetry = 0;
 #endif
