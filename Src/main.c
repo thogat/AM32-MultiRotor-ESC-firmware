@@ -397,6 +397,7 @@ char dshot_telemetry = 0;
 uint8_t last_dshot_command = 0;
 char old_routine = 0;
 uint16_t adjusted_input = 0;
+uint16_t dataReceived = 0;
 
 #define TEMP30_CAL_VALUE            ((uint16_t*)((uint32_t)0x1FFFF7B8))
 #define TEMP110_CAL_VALUE           ((uint16_t*)((uint32_t)0x1FFFF7C2))
@@ -1204,7 +1205,7 @@ if(send_telemetry){
 			           battery_voltage,
 					   actual_current,
 	  				   (uint16_t)consumed_current,
-	  					e_rpm);
+	  					dataReceived);
 	  send_telem_DMA();
 	  send_telemetry = 0;
 #endif
@@ -1748,6 +1749,7 @@ if(newinput > 2000){
   					if(use_speed_control_loop){
   					  if (drive_by_rpm){
  						target_e_com_time = map(adjusted_input , 47 ,2047 , target_e_com_time_low, target_e_com_time_high);
+						dataReceived = adjusted_input;
   		  				if(adjusted_input < 47){           // dead band ?
   		  					input= 0;
   		  					speedPid.error = 0;
