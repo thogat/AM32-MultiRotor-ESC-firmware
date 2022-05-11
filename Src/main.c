@@ -1205,7 +1205,7 @@ void interruptRoutine(){
 						battery_voltage,
 						actual_current,
 						(uint16_t)consumed_current,
-						dataReceived);
+						e_rpm);
 				send_telem_DMA();
 				send_telemetry = 0;
 #endif
