@@ -1,34 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@thogat 
-AlkaMotors
-/
-AM32-MultiRotor-ESC-firmware 
-Public
-Code
-Issues
-6
-Pull requests
-1
-Actions
-Projects
-Wiki
-Security
-Insights
-AM32-MultiRotor-ESC-firmware/Src/main.c
-@AlkaMotors
-AlkaMotors Performance tweak f051
-Latest commit 775a17b on 18 Mar
- History
- 4 contributors
-@AlkaMotors@mikeller@Voodoobrew101@ColinNiu
-2007 lines (1782 sloc)  57.3 KB
-   
 /* AM32- multi-purpose brushless controller firmware for the stm32f051 */
 
 //===========================================================================
@@ -2035,16 +2004,3 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
