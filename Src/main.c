@@ -850,8 +850,9 @@ void commutate(){
 	bemfcounter = 0;
 	zcfound = 0;
 	if(use_speed_control_loop && running){
-		input_override += doPidCalculations(&speedPid, e_com_time, target_e_com_time)/10000;
-		dataReceived = input_override;
+//		input_override += doPidCalculations(&speedPid, e_com_time, target_e_com_time)/10000;
+		input_override = doPidCalculations(&speedPid, e_com_time, target_e_com_time)/10000;
+//		dataReceived = input_override;
 		if(input_override > 2047){
 			input_override = 2047;
 		}
@@ -1206,7 +1207,7 @@ void interruptRoutine(){
 						battery_voltage,
 						actual_current,
 						(uint16_t)consumed_current,
-						dataReceived);
+						e_rpm);
 				send_telem_DMA();
 				send_telemetry = 0;
 #endif
@@ -1752,7 +1753,7 @@ void interruptRoutine(){
 						if(use_speed_control_loop){
 							if (drive_by_rpm){
 								target_e_com_time = map(adjusted_input , 47 ,2047 , target_e_com_time_low, target_e_com_time_high);
-								dataReceived = target_e_com_time;
+//								dataReceived = target_e_com_time;
 								if(adjusted_input < 47){           // dead band ?
 									input= 0;
 									speedPid.error = 0;
