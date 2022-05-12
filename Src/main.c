@@ -850,7 +850,7 @@ void commutate(){
 	bemfcounter = 0;
 	zcfound = 0;
 	if(use_speed_control_loop && running){
-//		input_override += doPidCalculations(&speedPid, e_com_time, target_e_com_time)/10000;
+		input_override += doPidCalculations(&speedPid, e_com_time, target_e_com_time)/10000;
 //		dataReceived = input_override;
 		if(input_override > 2047){
 			input_override = 2047;
