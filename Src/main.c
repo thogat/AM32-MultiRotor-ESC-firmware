@@ -192,9 +192,9 @@ uint32_t MINIMUM_RPM_SPEED_CONTROL = 1000;
 
 //assign speed control PID values values are x10000
 fastPID speedPid = {      //commutation speed loop time
-		.Kp = 10,
+		.Kp = 20,//10
 		.Ki = 0,
-		.Kd = 100,
+		.Kd = 200,//100
 		.integral_limit = 10000,
 		.output_limit = 50000
 };
@@ -851,7 +851,6 @@ void commutate(){
 	zcfound = 0;
 	if(use_speed_control_loop && running){
 //		input_override += doPidCalculations(&speedPid, e_com_time, target_e_com_time)/10000;
-		input_override = doPidCalculations(&speedPid, e_com_time, target_e_com_time)/10000;
 //		dataReceived = input_override;
 		if(input_override > 2047){
 			input_override = 2047;
